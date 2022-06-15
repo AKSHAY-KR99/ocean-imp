@@ -1,0 +1,81 @@
+<!--<!DOCTYPE html>
+<html>
+<body style="background-color:#ffffff;width: 520px;border: 170px solid #f5f5f5;border-width: 40px 100% 80px 100%;margin:0px;
+padding: 60px 40px 50px 40px;font-family: Arial">
+<h1 style="font-family:Times New Roman">Ocean has received a new message</h1>
+
+{% if contact_data.name %}
+<h4>Name<br/> <span style="font-weight:normal">{{ contact_data.name }}</span></h4>
+{% endif %}
+{% if contact_data.mobile %}
+<h4>Phone<br/> <span style="font-weight:normal">{{ contact_data.mobile }}</span></h4>
+{% endif %}
+{% if contact_data.email_address %}
+<h4>Email<br/> <span style="font-weight:normal">{{ contact_data.email_address }}</span></h4>
+{% endif %}
+{% if contact_data.message %}
+<h4>Tell us a bit about your business and goals.<br/> <span style="font-weight:normal">{{ contact_data.message }}</span></h4>
+{% endif %}
+{% if contact_data.device %}
+<h4>Device<br/> <span style="font-weight:normal">{{ contact_data.device }}</span></h4>
+{% endif %}
+{% if contact_data.language %}
+<h4>Language<br/> <span style="font-weight:normal">{{ contact_data.language }}</span></h4>
+{% endif %}
+<h4>Submitted from<br/><span style="font-weight:normal">Homepage</span></h4>
+<br/>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<body
+    style="
+      background: linear-gradient(to bottom left, #94baf8 0%, #ffffff 100%);
+      padding: 50px;
+      font-family: Arial;
+      font-size: 19px;
+      color: #152d54;
+      display: flex;
+      justify-content: center;
+    ">
+    <div
+      style="
+        margin: 170px;
+        width: 50%;
+        background-color: #fff;
+        padding: 4%;
+        box-shadow: 13px 2px 30px 15px #a9c8fa;
+        margin-top: 110px;
+        min-width: fit-content;
+      ">
+      <br />
+      <img
+        style="width: 150px; margin-bottom: 21px; margin-left: 35%"
+        src="{{ logo_path }}ocean-logo-new.png"
+        alt="logo"/>
+      <br />
+      <h3 style="font-family:Times New Roman">Ocean has received a new message</h3>
+      <table >
+      {% if contact_data.name %}
+        <tr><th style="text-align: left">Name</th><td><span style="font-weight:normal">{{ contact_data.name }}</span></td></tr>
+        {% endif %}
+        {% if contact_data.mobile %}
+        <tr><th style="text-align: left">Phone</th><td><span style="font-weight:normal">{{ contact_data.mobile }}</span></td></tr>
+        {% endif %}
+        {% if contact_data.email_address %}
+        <tr><th style="text-align: left">Email</th><td><span style="font-weight:normal">{{ contact_data.email_address }}</span></td></tr>
+        {% endif %}
+        {% if contact_data.message %}
+        <tr><th style="text-align: left">Business and goals</th><td><span style="font-weight:normal">{{ contact_data.message }}</span></td></tr>
+        {% endif %}
+        {% if contact_data.device %}
+        <tr><th style="text-align: left">Device</th> <td><span style="font-weight:normal">{{ contact_data.device }}</span></td></tr>
+        {% endif %}
+        {% if contact_data.language %}
+        <tr><th style="text-align: left">Language</th> <td><span style="font-weight:normal">{{ contact_data.language }}</span></td></tr>
+        {% endif %}
+        <!--<tr><th style="text-align: left">Submitted from<th/><td><span style="font-weight:normal;text-align: left">Homepage</span></td></tr>-->
+        </table>
+        </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!--<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<body style="background-color:#ffffff;width: 520px;border: 170px solid #f5f5f5;border-width: 40px 100% 80px 100%;margin:0px;
+padding: 60px 40px 50px 40px;font-family: Arial">
+<h2>Hello {{ user_name }},</h2>
+<h2>
+    You received {{ paying_amount }} from {{ sender_name }}.
+</h2>
+<h2>The money is in your account and ready to use.</h2>
+<h3>Payment details</h3>
+<pre>
+    From:</br>
+           {{ sender_name }}</br>
+    Amount received:</br>
+            {{ paying_amount }}</br>
+    Reference:</br>
+            {{ reference_number }}
+</pre>
+<hr>
+
+Regards,<br/>
+Ocean Group
+<hr>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+  <body
+    style="
+      background: linear-gradient(to bottom left, #94baf8 0%, #ffffff 100%);
+      padding: 50px;
+      font-family: Arial;
+      font-size: 19px;
+      color: #152d54;
+      display: flex;
+      justify-content: center;
+    ">
+    <div
+      style="
+        margin: 170px;
+        width: 50%;
+        background-color: #fff;
+        padding: 4%;
+        box-shadow: 13px 2px 30px 15px #a9c8fa;
+        margin-top: 110px;
+        min-width: fit-content;
+      ">
+      <br />
+      <img
+        style="width: 150px; margin-bottom: 21px; margin-left: 35%"
+        src="{{ logo_path }}ocean-logo-new.png"
+        alt="logo"/>
+      <br />
+      Hi {{ user_name }},
+      <br />
+      <br />
+      <div style="margin-left: 15px; font-size: 22px; line-height: 1.5">
+          You received ${{ paying_amount }} from {{ sender_name }}.
+        <br />
+          The money is in your account and ready to use.
+        <br />
+
+          <div>
+          Payment details
+            <br/>
+            </br>
+              <table>
+                <tr><th style="text-align: left">From:</th><td><span style="font-weight:normal">{{ sender_name }}</span></td></tr></br>
+                <tr><th style="text-align: left">Amount:</th><td><span style="font-weight:normal">${{ paying_amount }}</span></td></tr></br>
+                <tr><th style="text-align: left">Reference:</th><td><span style="font-weight:normal">{{ reference_number }}</span></td></tr></br>
+              </table>
+
+        </div>
+        <br />
+        <br />
+      </div>
+      Regards,<br />
+      Ocean Group
+    </div>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!--<!DOCTYPE html>
+<html>
+<body style="background-color:#ffffff;width: 520px;border: 170px solid #f5f5f5;border-width: 40px 100% 80px 100%;margin:0px;
+padding: 60px 40px 50px 40px;font-family: Arial">
+<h1 style="font-family:Times New Roman">Leads Info</h1>
+
+{% if leads_data.first_name %}
+<h4>First Name: <span style="font-weight:normal">{{ leads_data.first_name }}</span></h4>
+{% endif %}
+{% if leads_data.last_name %}
+<h4>Last Name: <span style="font-weight:normal">{{ leads_data.last_name }}</span></h4>
+{% endif %}
+{% if leads_data.company_name %}
+<h4>Company Name: <span style="font-weight:normal">{{ leads_data.company_name }}</span></h4>
+{% endif %}
+{% if leads_data.company_email %}
+<h4>Company Email: <span style="font-weight:normal">{{ leads_data.company_email }}</span></h4>
+{% endif %}
+{% if leads_data.company_website %}
+<h4>Company Website: <span style="font-weight:normal">{{ leads_data.company_website }}</span></h4>
+{% endif %}
+{% if leads_data.company_registered_in %}
+<h4>Company Registered In: <span style="font-weight:normal">{{ leads_data.company_registered_in.name }}</span></h4>
+{% endif %}
+{% if leads_data.phone_number %}
+<h4>Phone Number: <span style="font-weight:normal">{{ leads_data.phone_number }}</span></h4>
+{% endif %}
+{% if leads_data.invoice_amount %}
+<h4>Requested Amount: <span style="font-weight:normal">{{ leads_data.invoice_amount }}</span></h4>
+{% endif %}
+{% if leads_data.annual_revenue %}
+<h4>Annual Revenue: <span style="font-weight:normal">{{ leads_data.annual_revenue }}</span></h4>
+{% endif %}
+{% if leads_data.description %}
+<h4>Description: <span style="font-weight:normal">{{ leads_data.description }}</span></h4>
+{% endif %}
+{% if leads_data.role %}
+<h4>Role: <span style="font-weight:normal">{{ leads_data.get_role_display }}</span></h4>
+{% endif %}
+<br/>
+Regards,<br/>
+Ocean Group
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<body
+    style="
+      background: linear-gradient(to bottom left, #94baf8 0%, #ffffff 100%);
+      padding: 50px;
+      font-family: Arial;
+      font-size: 19px;
+      color: #152d54;
+      display: flex;
+      justify-content: center;
+    ">
+    <div
+      style="
+        margin: 170px;
+        width: 50%;
+        background-color: #fff;
+        padding: 4%;
+        box-shadow: 13px 2px 30px 15px #a9c8fa;
+        margin-top: 110px;
+        min-width: fit-content;
+      ">
+      <br />
+      <img
+        style="width: 150px; margin-bottom: 21px; margin-left: 35%"
+        src="{{ logo_path }}ocean-logo-new.png"
+        alt="logo"/>
+      <br />
+<h1 style="font-family:Times New Roman">Leads Info</h1>
+
+<table>
+{% if leads_data.first_name %}
+<tr><th style="text-align: left">First Name:</th><td><span style="font-weight:normal">{{ leads_data.first_name }}</span></td></tr>
+{% endif %}
+{% if leads_data.last_name %}
+<tr><th style="text-align: left">Last Name:</th><td><span style="font-weight:normal">{{ leads_data.last_name }}</span></td></tr>
+{% endif %}
+{% if leads_data.company_name %}
+<tr><th style="text-align: left">Company Name:</th><td> <span style="font-weight:normal">{{ leads_data.company_name }}</span></td></tr>
+{% endif %}
+{% if leads_data.company_email %}
+<tr><th style="text-align: left">Company Email: </th><td><span style="font-weight:normal">{{ leads_data.company_email }}</span></td></tr>
+{% endif %}
+ </br>
+{% if leads_data.company_website %}
+<tr><th style="text-align: left">Company Website:</th><td><span style="font-weight:normal">{{ leads_data.company_website }}</span></td></tr>
+{% endif %}
+</br>
+{% if leads_data.company_registered_in %}
+<tr><th style="text-align: left">Company Registered In: </th><td><span style="font-weight:normal">{{ leads_data.company_registered_in.name }}</span></td></tr>
+{% endif %}
+{% if leads_data.phone_number %}
+<tr><th style="text-align: left">Phone Number: </th><td><span style="font-weight:normal">{{ leads_data.phone_number }}</span></td></tr>
+{% endif %}
+{% if leads_data.invoice_amount %}
+<tr><th style="text-align: left">Requested Amount: </th><td><span style="font-weight:normal">{{ leads_data.invoice_amount }}</span></td></tr>
+{% endif %}
+{% if leads_data.annual_revenue %}
+<tr><th style="text-align: left">Annual Revenue: </th><td><span style="font-weight:normal">{{ leads_data.annual_revenue }}</span></td></tr>
+{% endif %}
+{% if leads_data.description %}
+<tr><th style="text-align: left">Description:</th><td><span style="font-weight:normal">{{ leads_data.description }}</span></td></tr>
+{% endif %}
+{% if leads_data.role %}
+<tr><th style="text-align: left">Role:</th><td><span style="font-weight:normal">{{ leads_data.get_role_display }}</span></td></tr>
+{% endif %}
+<br/>
+</table>
+Regards,<br/>
+Ocean Group
+</div>
+</body>
+</html>
